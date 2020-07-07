@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 public class VendoItem extends BlockItem {
 	public VendoItem(VendoBottom block) {
-		super(block, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP));
+		super(block, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP).maxStackSize(1));
 	}
 	
 	@Override

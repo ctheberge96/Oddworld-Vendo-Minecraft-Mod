@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "soda-pop:item/example_item"
+		"layer0": "soda-pop:item/vendo_coin"
 	}
 }
