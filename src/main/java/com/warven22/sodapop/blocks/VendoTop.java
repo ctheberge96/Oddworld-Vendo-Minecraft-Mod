@@ -1,7 +1,5 @@
 package com.warven22.sodapop.blocks;
 
-import java.util.stream.Stream;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -12,23 +10,14 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
 public class VendoTop extends Block {
 	public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
-	
-	private static final VoxelShape VENDO_TOP_SHAPE = Stream.of(
-			Block.makeCuboidShape(3, 0, 6, 13, 16, 7), 
-			Block.makeCuboidShape(0, 0, 11, 16, 16, 16), 
-			Block.makeCuboidShape(1, 0, 9, 15, 16, 11), 
-			Block.makeCuboidShape(2, 0, 7, 14, 16, 9))
-			.reduce((v1,v2)->{return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
 	
 	public VendoTop() {
 		super(Block.Properties.create(Material.ROCK)
@@ -40,7 +29,16 @@ public class VendoTop extends Block {
 
 	@Override
 	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-		return VENDO_TOP_SHAPE;
+		switch (state.get(FACING)) {
+		case EAST:
+			return VendoBottom.VENDO_SHAPE_E;
+		case SOUTH:
+			return VendoBottom.VENDO_SHAPE_S;
+		case WEST:
+			return VendoBottom.VENDO_SHAPE_W;
+		default:
+			return VendoBottom.VENDO_SHAPE_N;
+		}
 	}
 	
 	@Override

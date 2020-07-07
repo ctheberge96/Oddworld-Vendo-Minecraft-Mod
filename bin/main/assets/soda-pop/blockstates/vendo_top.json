@@ -1,9 +1,8 @@
 {
   "variants": {
-  	"": { "model": "soda-pop:block/vendo_top" },
-    "FACING=north": { "model": "soda-pop:block/vendo_top" },
-    "FACING=east": { "model": "soda-pop:block/vendo_top", "y": 90},
-    "FACING=south": { "model": "soda-pop:block/vendo_top", "y": 180 },
-    "FACING=west": { "model": "soda-pop:block/vendo_top", "y": 270 }
+    "facing=north": { "model": "soda-pop:block/vendo_top" },
+    "facing=east": { "model": "soda-pop:block/vendo_top", "y": 90},
+    "facing=south": { "model": "soda-pop:block/vendo_top", "y": 180 },
+    "facing=west": { "model": "soda-pop:block/vendo_top", "y": 270 }
   }
 } 
