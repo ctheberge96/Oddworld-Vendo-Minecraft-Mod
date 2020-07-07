@@ -2,20 +2,13 @@ package com.warven22.sodapop.blocks;
 
 import java.util.stream.Stream;
 
-import com.warven22.sodapop.init.ModBlocks;
-import com.warven22.sodapop.init.ModItemGroups;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.util.math.BlockPos;
@@ -25,7 +18,6 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 public class VendoTop extends Block {
@@ -53,8 +45,14 @@ public class VendoTop extends Block {
 	
 	@Override
 	protected void fillStateContainer(Builder<Block, BlockState> builder) {
-		// TODO Auto-generated method stub
 		super.fillStateContainer(builder);
 		builder.add(FACING);
+	}
+	
+	@Override
+	public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
+		super.onBlockHarvested(worldIn, pos, state, player);
+		// Destroys bottom
+		worldIn.setBlockState(pos.down(), Blocks.AIR.getDefaultState());
 	}
 }
