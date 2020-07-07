@@ -1,0 +1,80 @@
+[04Jul2020 13:45:42.999] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20200515.085601, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 31.2.0, --version, MOD_DEV, --assetIndex, 1.15, --assetsDir, C:\Users\thebergec\.gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[04Jul2020 13:45:43.016] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.1.0+69+master.79f13f7 starting: java version 1.8.0_102 by Oracle Corporation
+[04Jul2020 13:45:43.836] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[04Jul2020 13:45:45.899] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\thebergec\.gradle\caches\forge_gradle\assets, --assetIndex, 1.15, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[04Jul2020 13:45:51.361] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[04Jul2020 13:46:10.898] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
+[04Jul2020 13:46:12.725] [modloading-worker-3/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.2.0, for MC 1.15.2 with MCP 20200515.085601
+[04Jul2020 13:46:12.726] [modloading-worker-3/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.2.0 Initialized
+[04Jul2020 13:46:13.020] [Render thread/INFO] [com.example.examplemod.ExampleMod/]: HELLO from Register Block
+[04Jul2020 13:46:18.937] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[04Jul2020 13:46:19.127] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[04Jul2020 13:46:19.412] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[04Jul2020 13:46:20.723] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 31.2.0 Target: null
+[04Jul2020 13:46:23.357] [Server-Worker-5/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: soda-pop:blockstates/example_block.json: java.io.FileNotFoundException: soda-pop:blockstates/example_block.json
+[04Jul2020 13:46:23.357] [Server-Worker-5/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'soda-pop:blockstates/example_block.json' missing model for variant: 'soda-pop:example_block#'
+[04Jul2020 13:46:26.345] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[04Jul2020 13:46:26.346] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[04Jul2020 13:46:26.523] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[04Jul2020 13:46:26.793] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
+[04Jul2020 13:46:26.794] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[04Jul2020 13:46:26.803] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[04Jul2020 13:46:26.812] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[04Jul2020 13:46:26.816] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[04Jul2020 13:46:26.820] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[04Jul2020 13:46:27.771] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[04Jul2020 13:46:27.796] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[04Jul2020 13:46:27.803] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[04Jul2020 13:46:28.272] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[04Jul2020 13:47:06.414] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[04Jul2020 13:47:06.415] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[04Jul2020 13:47:06.416] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[04Jul2020 13:47:06.417] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[04Jul2020 13:47:06.418] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[04Jul2020 13:47:06.712] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.15.2
+[04Jul2020 13:47:06.712] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
+[04Jul2020 13:47:07.055] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
+[04Jul2020 13:47:07.610] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, main, forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-recomp.jar
+[04Jul2020 13:47:09.585] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
+[04Jul2020 13:47:12.412] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 825 advancements
+[04Jul2020 13:47:13.272] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[04Jul2020 13:47:14.715] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[04Jul2020 13:47:14.715] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[04Jul2020 13:47:14.715] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[04Jul2020 13:47:14.947] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[04Jul2020 13:47:15.581] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 47%
+[04Jul2020 13:47:15.832] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 2533 ms
+[04Jul2020 13:47:16.641] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:mob_spawner @ BlockPos{x=-45, y=33, z=-221}
+[04Jul2020 13:47:16.642] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:beehive @ BlockPos{x=-66, y=71, z=-243}
+[04Jul2020 13:47:16.643] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:mob_spawner @ BlockPos{x=-82, y=36, z=-104}
+[04Jul2020 13:47:16.643] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:chest @ BlockPos{x=-85, y=36, z=-103}
+[04Jul2020 13:47:16.643] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:beehive @ BlockPos{x=56, y=72, z=-299}
+[04Jul2020 13:47:16.644] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:beehive @ BlockPos{x=55, y=67, z=-261}
+[04Jul2020 13:47:16.644] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:chest @ BlockPos{x=-190, y=25, z=-173}
+[04Jul2020 13:47:16.644] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:mob_spawner @ BlockPos{x=-192, y=25, z=-173}
+[04Jul2020 13:47:16.644] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:beehive @ BlockPos{x=68, y=73, z=-303}
+[04Jul2020 13:47:16.644] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:chest @ BlockPos{x=-194, y=25, z=-172}
+[04Jul2020 13:47:16.645] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:mob_spawner @ BlockPos{x=95, y=15, z=-257}
+[04Jul2020 13:47:16.645] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:chest @ BlockPos{x=108, y=47, z=-298}
+[04Jul2020 13:47:16.645] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:mob_spawner @ BlockPos{x=105, y=47, z=-296}
+[04Jul2020 13:47:16.645] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:mob_spawner @ BlockPos{x=97, y=18, z=-352}
+[04Jul2020 13:47:16.670] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[04Jul2020 13:47:16.674] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[04Jul2020 13:47:16.681] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
+[04Jul2020 13:47:18.808] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[04Jul2020 13:47:19.330] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@77ffb1df
+[04Jul2020 13:47:19.362] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:03fa02f2] logged in with entity id 150 at (-184.80938768547884, 63.0, -28.408773140793837)
+[04Jul2020 13:47:19.418] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[04Jul2020 13:47:19.974] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[04Jul2020 13:47:19.993] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[04Jul2020 13:47:20.235] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 7 advancements
+[04Jul2020 13:47:21.270] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2232ms or 44 ticks behind
+[04Jul2020 13:47:28.239] [Server thread/ERROR] [net.minecraft.world.chunk.storage.ChunkSerializer/]: Chunk file at [-17, -24] is in the wrong location; relocating. (Expected [-17, -24], got [-13, -27])
+[04Jul2020 13:47:50.892] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:mob_spawner @ BlockPos{x=-102, y=16, z=-43}
+[04Jul2020 13:47:50.893] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:chest @ BlockPos{x=-102, y=16, z=-45}
+[04Jul2020 13:47:50.893] [Server thread/WARN] [net.minecraft.tileentity.TileEntity/]: Block entity invalid: minecraft:chest @ BlockPos{x=-99, y=16, z=-44}
+[04Jul2020 13:48:08.928] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Changed the block at -183, 62, -28]
+[04Jul2020 13:48:08.942] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Changed the block at -183, 62, -28
+[04Jul2020 13:48:10.390] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[04Jul2020 13:48:10.408] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[04Jul2020 14:56:15.501] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 652799ms or 13055 ticks behind

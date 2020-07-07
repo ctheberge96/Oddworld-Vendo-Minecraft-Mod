@@ -1,0 +1,9 @@
+{
+  "variants": {
+  	"": { "model": "soda-pop:block/vendo_bottom" },
+    "FACING=north": { "model": "soda-pop:block/vendo_bottom" },
+    "FACING=east": { "model": "soda-pop:block/vendo_bottom", "y": 90},
+    "FACING=south": { "model": "soda-pop:block/vendo_bottom", "y": 180 },
+    "FACING=west": { "model": "soda-pop:block/vendo_bottom", "y": 270 }
+  }
+}
