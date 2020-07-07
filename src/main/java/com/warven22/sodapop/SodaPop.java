@@ -6,11 +6,9 @@ import org.apache.logging.log4j.Logger;
 import com.warven22.sodapop.blocks.VendoBottom;
 import com.warven22.sodapop.blocks.VendoTop;
 import com.warven22.sodapop.blocks.blockitems.VendoItem;
-import com.warven22.sodapop.init.ModItemGroups;
-import com.warven22.sodapop.items.ExampleItem;
+import com.warven22.sodapop.items.VendoCoin;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -29,7 +27,7 @@ public class SodaPop {
 	private static final DeferredRegister<Block> REGISTER_BLOCKS = new DeferredRegister<Block>(ForgeRegistries.BLOCKS, MODID);
 	
 	// Items
-	public static final RegistryObject<Item> EXAMPLE_ITEM = REGISTER_ITEMS.register("example_item", () -> new ExampleItem());
+	public static final RegistryObject<Item> VENDO_COIN = REGISTER_ITEMS.register("vendo_coin", () -> new VendoCoin());
 	
 	// Blocks
 	private static final VendoBottom vendoBottom = new VendoBottom();
