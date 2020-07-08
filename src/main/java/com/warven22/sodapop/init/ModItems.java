@@ -7,5 +7,6 @@ import net.minecraftforge.registries.ObjectHolder;
 
 @ObjectHolder(SodaPop.MODID)
 public class ModItems {
-	public static final Item EXAMPLE_ITEM = null;
+	public static final Item VENDO_COIN = null;
+	public static final Item CAN_EXPRESSO = null;
 }

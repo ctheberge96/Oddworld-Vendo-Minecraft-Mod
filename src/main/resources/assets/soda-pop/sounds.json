@@ -1,0 +1,22 @@
+{
+  "vendo_deny": {
+    "category": "block",
+    "subtitle": "mymod.subtitle.openChest",
+    "sounds": [
+    	{
+    		"name": "soda-pop:vendo_negative",
+    		"stream": true
+    	}
+    ]
+  },
+  "vendo_approve": {
+    "category": "block",
+    "subtitle": "mymod.subtitle.openChest",
+    "sounds": [
+    	{
+    		"name": "soda-pop:vendo_positive",
+    		"stream": true
+    	}
+    ]
+  }
+}
