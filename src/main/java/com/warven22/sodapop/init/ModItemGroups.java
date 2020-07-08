@@ -13,7 +13,7 @@ public class ModItemGroups {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(SodaPop.MODID, () -> new ItemStack(ModItems.EXAMPLE_ITEM));
+	public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(SodaPop.MODID, () -> new ItemStack(ModItems.VENDO_COIN));
 	
 	public static class ModItemGroup extends ItemGroup {
 

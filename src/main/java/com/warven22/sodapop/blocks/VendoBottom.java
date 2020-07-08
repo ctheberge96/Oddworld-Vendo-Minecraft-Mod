@@ -3,6 +3,9 @@ package com.warven22.sodapop.blocks;
 import java.util.stream.Stream;
 
 import com.warven22.sodapop.init.ModBlocks;
+import com.warven22.sodapop.init.ModItems;
+import com.warven22.sodapop.init.ModSounds;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -11,22 +14,30 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer.Builder;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 public class VendoBottom extends Block {
 	public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+	//public static final IntegerProperty PRICE = IntegerProperty.create("PRICE", 0, Integer.MAX_VALUE);
 	
 	public static final VoxelShape VENDO_SHAPE_N = Stream.of(
 			Block.makeCuboidShape(3, 0, 6, 13, 16, 7), 
@@ -91,6 +102,7 @@ public class VendoBottom extends Block {
 	protected void fillStateContainer(Builder<Block, BlockState> builder) {
 		super.fillStateContainer(builder);
 		builder.add(FACING);
+		//builder.add(PRICE);
 	}
 
 	@Override
@@ -98,6 +110,41 @@ public class VendoBottom extends Block {
 		super.onBlockHarvested(worldIn, pos, state, player);
 		// Destroys top
 		worldIn.setBlockState(pos.up(), Blocks.AIR.getDefaultState());
+	}
+	
+	@Override
+	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+		if (handIn != Hand.MAIN_HAND) return ActionResultType.FAIL;
+		if (worldIn instanceof ServerWorld) return ActionResultType.FAIL;
+		int totalPrice = 10;//state.get(PRICE).intValue();
+		PlayerInventory playerInv = player.inventory;
+		int coins = playerInv.count(ModItems.VENDO_COIN);
+		if (totalPrice <= coins) {
+			// Enough coins, so we can remove them
+			while (totalPrice > 0) {
+				int nextCoinStackIndex = playerInv.getSlotFor(new ItemStack(ModItems.VENDO_COIN));
+				if (nextCoinStackIndex == -1) {
+					break;
+				}
+				ItemStack coinStack = playerInv.getStackInSlot(nextCoinStackIndex);
+				int totalTaken = 0;
+				if (coinStack.getCount() <= totalPrice) {
+					totalTaken = coinStack.getCount();
+					playerInv.removeStackFromSlot(nextCoinStackIndex);
+				} else {
+					totalTaken = totalPrice;
+					playerInv.decrStackSize(nextCoinStackIndex, totalPrice);
+				}
+				totalPrice -= totalTaken;
+			}
+			worldIn.playSound(player, pos, ModSounds.VENDO_APPROVE, SoundCategory.BLOCKS, .25f, 1f);
+			playerInv.addItemStackToInventory(new ItemStack(ModItems.CAN_EXPRESSO, 1));
+		} else {
+			// Not enough coins, so don't touch anything
+			worldIn.playSound(player, pos, ModSounds.VENDO_DENY, SoundCategory.BLOCKS, .25f, 1f);
+			player.sendMessage(new StringTextComponent(String.format("You need %d coins to buy a can of Expresso!", totalPrice)));
+		}
+		return ActionResultType.SUCCESS;
 	}
 	
 }
