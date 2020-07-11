@@ -5,6 +5,7 @@ import java.util.stream.Stream;
 import com.warven22.sodapop.init.ModBlocks;
 import com.warven22.sodapop.init.ModItems;
 import com.warven22.sodapop.init.ModSounds;
+import com.warven22.sodapop.utils.InventoryUtil;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,6 +13,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -32,7 +34,6 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 public class VendoBottom extends Block {
@@ -115,7 +116,6 @@ public class VendoBottom extends Block {
 	@Override
 	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
 		if (handIn != Hand.MAIN_HAND) return ActionResultType.FAIL;
-		if (worldIn instanceof ServerWorld) return ActionResultType.FAIL;
 		int totalPrice = 10;//state.get(PRICE).intValue();
 		PlayerInventory playerInv = player.inventory;
 		int coins = playerInv.count(ModItems.VENDO_COIN);
@@ -138,11 +138,13 @@ public class VendoBottom extends Block {
 				totalPrice -= totalTaken;
 			}
 			worldIn.playSound(player, pos, ModSounds.VENDO_APPROVE, SoundCategory.BLOCKS, .25f, 1f);
-			playerInv.addItemStackToInventory(new ItemStack(ModItems.CAN_EXPRESSO, 1));
+			InventoryUtil.addSingleItemToInventory(player.inventory, ModItems.CAN_EXPRESSO);
 		} else {
 			// Not enough coins, so don't touch anything
 			worldIn.playSound(player, pos, ModSounds.VENDO_DENY, SoundCategory.BLOCKS, .25f, 1f);
-			player.sendMessage(new StringTextComponent(String.format("You need %d coins to buy a can of Expresso!", totalPrice)));
+			if (worldIn instanceof ClientWorld) {
+				player.sendMessage(new StringTextComponent(String.format("You need %d coins to buy a can of Expresso!", totalPrice)));
+			}
 		}
 		return ActionResultType.SUCCESS;
 	}

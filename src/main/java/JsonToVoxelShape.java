@@ -7,7 +7,6 @@ import java.io.IOException;
 import net.minecraft.block.Block;
 
 public class JsonToVoxelShape {
-
 	public static void main(String[] args) {
 		String filePath = "src\\main\\resources\\assets\\soda-pop\\models\\block\\vendo_top.json";
 		File jsonSource = new File(filePath);
