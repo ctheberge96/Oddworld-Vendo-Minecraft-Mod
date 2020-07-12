@@ -9,4 +9,5 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModSounds {
 	public static final SoundEvent VENDO_DENY = null;
 	public static final SoundEvent VENDO_APPROVE = null;
+	public static final SoundEvent CAN_DRINK = null;
 }

@@ -1,0 +1,8 @@
+{
+	"parent": "soda-pop:block/vendo_full",
+	"textures": {
+		"0": "soda-pop:blocks/metal",
+		"5": "soda-pop:blocks/tex_vendo_bounce",
+		"particle": "soda-pop:blocks/metal"
+	}
+}

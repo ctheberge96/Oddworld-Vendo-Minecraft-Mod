@@ -9,4 +9,6 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModItems {
 	public static final Item VENDO_COIN = null;
 	public static final Item CAN_EXPRESSO = null;
+	public static final Item CAN_BOUNCE = null;
+	public static final Item CAN_HEALTHUP = null;
 }

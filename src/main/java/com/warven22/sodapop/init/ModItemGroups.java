@@ -8,11 +8,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 public class ModItemGroups {
-
-	public ModItemGroups() {
-		// TODO Auto-generated constructor stub
-	}
-	
 	public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(SodaPop.MODID, () -> new ItemStack(ModItems.VENDO_COIN));
 	
 	public static class ModItemGroup extends ItemGroup {

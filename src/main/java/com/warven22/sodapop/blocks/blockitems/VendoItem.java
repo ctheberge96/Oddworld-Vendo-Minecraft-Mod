@@ -1,6 +1,6 @@
 package com.warven22.sodapop.blocks.blockitems;
 
-import com.warven22.sodapop.blocks.VendoBottom;
+import com.warven22.sodapop.blocks.VendoBottomBase;
 import com.warven22.sodapop.init.ModItemGroups;
 
 import net.minecraft.block.BlockState;
@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class VendoItem extends BlockItem {
-	public VendoItem(VendoBottom block) {
+	public VendoItem(VendoBottomBase block) {
 		super(block, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP).maxStackSize(1));
 	}
 	
