@@ -18,5 +18,15 @@
     		"stream": true
     	}
     ]
+  },
+  "can_drink": {
+  	"category": "player",
+  	"subtitle": "mymod.subtitle.drink",
+  	"sounds": [
+  		{
+  			"name": "soda-pop:can_drink",
+  			"stream": true
+  		}
+  	]
   }
 }

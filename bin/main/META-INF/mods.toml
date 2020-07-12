@@ -9,7 +9,7 @@ loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft versio
 modId="soda-pop" #mandatory
 
 #version="${file.jarVersion}" #mandatory
-version="0.0.1"
+version="1.15.2-1.0.0.0"
 
 displayName="Soda Pop" #mandatory
 
@@ -19,7 +19,7 @@ displayName="Soda Pop" #mandatory
 
 logoFile="examplemod.png" #optional
 
-credits="Thanks to Cadiboo for the tutorial" #optional
+credits="" #optional
 
 authors="@Warven22 on Twitter" #optional
 #(#mandatory)

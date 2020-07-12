@@ -1,13 +1,13 @@
 {
-  "minecraft:recipes/building_blocks/birch_stairs": {
+  "minecraft:recipes/tools/fishing_rod": {
     "criteria": {
-      "has_planks": "2020-07-10 22:36:22 -0400"
+      "has_string": "2020-07-11 23:28:33 -0400"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/dark_oak_boat": {
+  "minecraft:recipes/combat/bow": {
     "criteria": {
-      "in_water": "2020-07-03 22:48:15 -0400"
+      "has_string": "2020-07-11 23:28:33 -0400"
     },
     "done": true
   },
@@ -17,21 +17,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/spruce_fence": {
+  "minecraft:adventure/kill_a_mob": {
     "criteria": {
-      "has_planks": "2020-07-11 00:10:47 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/diorite_stairs": {
-    "criteria": {
-      "has_diorite": "2020-07-08 22:47:59 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/spruce_slab": {
-    "criteria": {
-      "has_planks": "2020-07-11 00:10:47 -0400"
+      "minecraft:spider": "2020-07-11 23:28:33 -0400"
     },
     "done": true
   },
@@ -53,21 +41,9 @@
     },
     "done": true
   },
-  "minecraft:husbandry/balanced_diet": {
+  "minecraft:recipes/decorations/loom": {
     "criteria": {
-      "rotten_flesh": "2020-07-08 22:44:04 -0400"
-    },
-    "done": false
-  },
-  "minecraft:recipes/building_blocks/andesite": {
-    "criteria": {
-      "has_stone": "2020-07-08 22:47:59 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/birch_trapdoor": {
-    "criteria": {
-      "has_planks": "2020-07-10 22:36:22 -0400"
+      "has_string": "2020-07-11 23:28:33 -0400"
     },
     "done": true
   },
@@ -83,12 +59,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/spruce_stairs": {
-    "criteria": {
-      "has_planks": "2020-07-11 00:10:47 -0400"
-    },
-    "done": true
-  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:forest": "2020-07-03 21:16:01 -0400",
@@ -98,37 +68,13 @@
     },
     "done": false
   },
-  "minecraft:recipes/redstone/spruce_trapdoor": {
-    "criteria": {
-      "has_planks": "2020-07-11 00:10:47 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/diorite_slab": {
-    "criteria": {
-      "has_diorite": "2020-07-08 22:47:59 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/birch_pressure_plate": {
     "criteria": {
       "has_planks": "2020-07-10 22:36:22 -0400"
     },
     "done": true
   },
-  "minecraft:recipes/redstone/birch_door": {
-    "criteria": {
-      "has_planks": "2020-07-10 22:36:22 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/crafting_table": {
-    "criteria": {
-      "has_planks": "2020-07-10 22:36:22 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/birch_slab": {
     "criteria": {
       "has_planks": "2020-07-10 22:36:22 -0400"
     },
@@ -164,12 +110,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_diorite": {
-    "criteria": {
-      "has_stone": "2020-07-08 22:47:59 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/barrel": {
     "criteria": {
       "has_planks": "2020-07-10 22:36:22 -0400"
@@ -182,19 +122,7 @@
     },
     "done": true
   },
-  "minecraft:recipes/redstone/birch_fence_gate": {
-    "criteria": {
-      "has_planks": "2020-07-10 22:36:22 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/transportation/acacia_boat": {
-    "criteria": {
-      "in_water": "2020-07-03 22:48:15 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/oak_boat": {
     "criteria": {
       "in_water": "2020-07-03 22:48:15 -0400"
     },
@@ -203,18 +131,6 @@
   "minecraft:recipes/decorations/birch_sign": {
     "criteria": {
       "has_birch_planks": "2020-07-10 22:36:22 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/spruce_pressure_plate": {
-    "criteria": {
-      "has_planks": "2020-07-11 00:10:47 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/birch_fence": {
-    "criteria": {
-      "has_planks": "2020-07-10 22:36:22 -0400"
     },
     "done": true
   },
@@ -230,12 +146,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_diorite_from_diorite_stonecutting": {
-    "criteria": {
-      "has_diorite": "2020-07-08 22:47:59 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/transportation/jungle_boat": {
     "criteria": {
       "in_water": "2020-07-03 22:48:15 -0400"
@@ -245,6 +155,150 @@
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
       "in_water": "2020-07-03 22:48:15 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_stairs": {
+    "criteria": {
+      "has_planks": "2020-07-10 22:36:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/white_wool_from_string": {
+    "criteria": {
+      "has_string": "2020-07-11 23:28:33 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2020-07-03 22:48:15 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/spruce_fence": {
+    "criteria": {
+      "has_planks": "2020-07-11 00:10:47 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diorite_stairs": {
+    "criteria": {
+      "has_diorite": "2020-07-08 22:47:59 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_slab": {
+    "criteria": {
+      "has_planks": "2020-07-11 00:10:47 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:spider": "2020-07-11 23:28:33 -0400"
+    },
+    "done": false
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "rotten_flesh": "2020-07-08 22:44:04 -0400"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/andesite": {
+    "criteria": {
+      "has_stone": "2020-07-08 22:47:59 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_trapdoor": {
+    "criteria": {
+      "has_planks": "2020-07-10 22:36:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_stairs": {
+    "criteria": {
+      "has_planks": "2020-07-11 00:10:47 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tripwire_hook": {
+    "criteria": {
+      "has_string": "2020-07-11 23:28:33 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/spruce_trapdoor": {
+    "criteria": {
+      "has_planks": "2020-07-11 00:10:47 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diorite_slab": {
+    "criteria": {
+      "has_diorite": "2020-07-08 22:47:59 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_door": {
+    "criteria": {
+      "has_planks": "2020-07-10 22:36:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_slab": {
+    "criteria": {
+      "has_planks": "2020-07-10 22:36:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cartography_table": {
+    "criteria": {
+      "has_string": "2020-07-11 23:28:33 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_diorite": {
+    "criteria": {
+      "has_stone": "2020-07-08 22:47:59 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_fence_gate": {
+    "criteria": {
+      "has_planks": "2020-07-10 22:36:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2020-07-03 22:48:15 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/crossbow": {
+    "criteria": {
+      "has_string": "2020-07-11 23:28:33 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/spruce_pressure_plate": {
+    "criteria": {
+      "has_planks": "2020-07-11 00:10:47 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/birch_fence": {
+    "criteria": {
+      "has_planks": "2020-07-10 22:36:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_diorite_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2020-07-08 22:47:59 -0400"
     },
     "done": true
   },
