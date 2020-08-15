@@ -1,0 +1,107 @@
+---- Minecraft Crash Report ----
+// Oops.
+
+Time: 8/15/20 2:50 PM
+Description: Ticking player
+
+java.lang.NullPointerException: Ticking player
+	at net.minecraft.entity.LivingEntity.onNewPotionEffect(LivingEntity.java:838) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.ServerPlayerEntity.onNewPotionEffect(ServerPlayerEntity.java:1092) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.addPotionEffect(LivingEntity.java:783) ~[?:?] {re:classloading}
+	at com.warven22.sodapop.utils.PotionEffectUtil.addEffectToLivingEntity(PotionEffectUtil.java:9) ~[?:?] {re:classloading}
+	at com.warven22.sodapop.items.BaseCan.onItemUseFinish(BaseCan.java:46) ~[?:?] {re:classloading}
+	at net.minecraft.item.ItemStack.onItemUseFinish(ItemStack.java:213) ~[?:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.onItemUseFinish(LivingEntity.java:2874) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.ServerPlayerEntity.onItemUseFinish(ServerPlayerEntity.java:1027) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.updateActiveHand(LivingEntity.java:2752) ~[?:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2185) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.tick(PlayerEntity.java:237) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.player.ServerPlayerEntity.playerTick(ServerPlayerEntity.java:379) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.network.play.ServerPlayNetHandler.tick(ServerPlayNetHandler.java:188) ~[?:?] {re:classloading}
+	at net.minecraft.network.NetworkManager.tick(NetworkManager.java:250) ~[?:?] {re:classloading}
+	at net.minecraft.network.NetworkSystem.tick(NetworkSystem.java:152) ~[?:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:903) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:120) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:662) [?:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_102] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.entity.LivingEntity.onNewPotionEffect(LivingEntity.java:838)
+	at net.minecraft.entity.player.ServerPlayerEntity.onNewPotionEffect(ServerPlayerEntity.java:1092)
+	at net.minecraft.entity.LivingEntity.addPotionEffect(LivingEntity.java:783)
+	at com.warven22.sodapop.utils.PotionEffectUtil.addEffectToLivingEntity(PotionEffectUtil.java:9)
+	at com.warven22.sodapop.items.BaseCan.onItemUseFinish(BaseCan.java:46)
+	at net.minecraft.item.ItemStack.onItemUseFinish(ItemStack.java:213)
+	at net.minecraft.entity.LivingEntity.onItemUseFinish(LivingEntity.java:2874)
+	at net.minecraft.entity.player.ServerPlayerEntity.onItemUseFinish(ServerPlayerEntity.java:1027)
+	at net.minecraft.entity.LivingEntity.updateActiveHand(LivingEntity.java:2752)
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2185)
+	at net.minecraft.entity.player.PlayerEntity.tick(PlayerEntity.java:237)
+
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.entity.player.ServerPlayerEntity)
+	Entity ID: 124
+	Entity Name: Dev
+	Entity's Exact location: -48.76, 66.00, -213.83
+	Entity's Block location: World: (-49,66,-214), Chunk: (at 15,4,10 in -4,-14; contains blocks -64,0,-224 to -49,255,-209), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.entity.player.ServerPlayerEntity.playerTick(ServerPlayerEntity.java:379)
+	at net.minecraft.network.play.ServerPlayNetHandler.tick(ServerPlayNetHandler.java:188)
+	at net.minecraft.network.NetworkManager.tick(NetworkManager.java:250)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@4a156229
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.tick(NetworkSystem.java:152)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:903)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:120)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:662)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.15.2
+	Minecraft Version ID: 1.15.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_102, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 997333888 bytes (951 MB) / 2152202240 bytes (2052 MB) up to 3776970752 bytes (3602 MB)
+	CPUs: 8
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 5.1.2+70+master.2845bb9
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/eventbus-2.2.0-service.jar eventbus PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.1.1-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 31.2
+	Forge: net.minecraftforge:31.2.0
+	FML Language Providers: 
+		javafml@31.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar Minecraft {minecraft@1.15.2 DONE}
+		main Soda Pop {soda-pop@1.15.2-1.0.0.0 DONE}
+		forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-recomp.jar Forge {forge@31.2.0 DONE}
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/124, l='New World', x=-48.76, y=66.00, z=-213.83]]
+	Data Packs: vanilla, mod:soda-pop, mod:forge (incompatible)
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

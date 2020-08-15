@@ -6,13 +6,17 @@ import org.apache.logging.log4j.Logger;
 import com.warven22.sodapop.blocks.VendoBottomBase;
 import com.warven22.sodapop.blocks.VendoTopBase;
 import com.warven22.sodapop.blocks.blockitems.VendoItem;
+import com.warven22.sodapop.effects.Zap;
 import com.warven22.sodapop.items.BounceCan;
 import com.warven22.sodapop.items.ExpressoCan;
 import com.warven22.sodapop.items.HealthUpCan;
 import com.warven22.sodapop.items.VendoCoin;
+import com.warven22.sodapop.items.ZapCan;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effect;
+import net.minecraft.potion.EffectType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,12 +35,14 @@ public class SodaPop {
 	public static final DeferredRegister<Item> REGISTER_ITEMS = new DeferredRegister<Item>(ForgeRegistries.ITEMS, MODID);
 	public static final DeferredRegister<Block> REGISTER_BLOCKS = new DeferredRegister<Block>(ForgeRegistries.BLOCKS, MODID);
 	public static final DeferredRegister<SoundEvent> REGISTER_SOUNDS = new DeferredRegister<SoundEvent>(ForgeRegistries.SOUND_EVENTS, MODID);
+	public static final DeferredRegister<Effect> REGISTER_EFFECTS = new DeferredRegister<Effect>(ForgeRegistries.POTIONS, MODID);
 	
 	// Items
 	public static final RegistryObject<Item> VENDO_COIN = REGISTER_ITEMS.register("vendo_coin", () -> new VendoCoin());
 	public static final RegistryObject<Item> CAN_EXPRESSO = REGISTER_ITEMS.register("can_expresso", () -> new ExpressoCan());
 	public static final RegistryObject<Item> CAN_BOUNCE = REGISTER_ITEMS.register("can_bounce", () -> new BounceCan());
 	public static final RegistryObject<Item> CAN_HEALTHUP = REGISTER_ITEMS.register("can_healthup", () -> new HealthUpCan());
+	public static final RegistryObject<Item> CAN_ZAP = REGISTER_ITEMS.register("can_zap", () -> new ZapCan());
 	
 	// Blocks
 	
@@ -63,8 +69,12 @@ public class SodaPop {
 	public static final RegistryObject<SoundEvent> VENDO_APPROVE = REGISTER_SOUNDS.register("vendo_approve", () -> new SoundEvent(new ResourceLocation(MODID, "vendo_approve")));
 	public static final RegistryObject<SoundEvent> CAN_DRINK = REGISTER_SOUNDS.register("can_drink", () -> new SoundEvent(new ResourceLocation(MODID, "can_drink")));
 	
+	// Effects
+	public static final RegistryObject<Effect> EFFECT_ZAP = REGISTER_EFFECTS.register("effect_zap", () -> new Zap());
+	
 	public SodaPop() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		REGISTER_EFFECTS.register(bus);
 		REGISTER_ITEMS.register(bus);
 		REGISTER_BLOCKS.register(bus);
 		REGISTER_SOUNDS.register(bus);

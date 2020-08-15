@@ -11,4 +11,5 @@ public class ModItems {
 	public static final Item CAN_EXPRESSO = null;
 	public static final Item CAN_BOUNCE = null;
 	public static final Item CAN_HEALTHUP = null;
+	public static final Item CAN_ZAP = null;
 }
